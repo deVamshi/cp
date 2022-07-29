@@ -1,11 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct ListNode {
-	int data;
-	int exp;
-	struct ListNode *next;
-};
+void calculateSpan(int price[], int n, int S[]){
+	stack st;
+	st.push(0); s[0] = 1;
+	for(int i = 0; i < n; I++){
+		while(!st.empty() && price[st.top()] < price[i]) st.pop();
+		s[i] = st.empty() ? i + 1 : i - st.top();
+		st.push(i);
+	}
+	
+}
 
 int main () {
 
@@ -23,7 +28,7 @@ int main () {
 	}
 
 
-	
+
 
 
 
